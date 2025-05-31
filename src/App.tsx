@@ -4,7 +4,7 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import AiHuman from './components/AiHuman';
 import CaseStudies from './components/CaseStudies';
-import FAQ from './components/FAQ';
+import Faq from './components/Faq'; // ✅ Fixed casing here
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ParticleBackground from './components/ui/ParticleBackground';
@@ -18,7 +18,7 @@ const App: React.FC = () => {
       <Services />
       <CaseStudies />
       <AiHuman />
-      <FAQ />
+      <Faq /> {/* ✅ Uses the correctly imported component */}
       <Contact />
       <Footer />
     </div>
