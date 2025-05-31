@@ -30,8 +30,8 @@
 
 /* Body styles */
 body {
-  background-color: var(--color-dark);
-  color: var(--color-light);
+  background-color: rgb(var(--color-dark));
+  color: rgb(var(--color-light));
   font-family: 'Inter', sans-serif;
 }
 
@@ -44,7 +44,7 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: rgb(255, 87, 0);
+  background-color: rgb(255 87 0);
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(var(--color-primary), 0.25);
 }
@@ -76,16 +76,16 @@ body {
 
 /* Glow effects */
 .label-pulse-glow {
-  box-shadow: 0 0 20px theme('colors.primary');
+  box-shadow: 0 0 20px rgba(var(--color-primary), 0.5);
   animation: glow 2s ease-in-out infinite;
 }
 
 @keyframes glow {
   0%, 100% {
-    box-shadow: 0 0 20px theme('colors.primary' / 30%);
+    box-shadow: 0 0 20px rgba(var(--color-primary), 0.3);
   }
   50% {
-    box-shadow: 0 0 30px theme('colors.primary' / 60%);
+    box-shadow: 0 0 30px rgba(var(--color-primary), 0.6);
   }
 }
 
@@ -116,9 +116,9 @@ body {
   z-index: 0;
 }
 
-/* Shiny line animation enhancement */
+/* Shiny line animation */
 .shiny-line {
-  background: linear-gradient(90deg, transparent, theme('colors.primary'), transparent);
+  background: linear-gradient(90deg, transparent, rgba(var(--color-primary), 1), transparent);
   animation: shine 3s infinite;
   position: relative;
   overflow: hidden;
@@ -152,7 +152,7 @@ body {
   @apply py-20 sm:py-32;
 }
 
-/* Animation styles */
+/* Shine animation */
 @keyframes shine {
   0% {
     transform: translateX(-100%);
