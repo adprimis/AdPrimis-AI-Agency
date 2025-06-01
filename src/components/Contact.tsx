@@ -74,7 +74,7 @@ const Contact: React.FC = () => {
             initial={{ opacity: 0, x: 30 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
             transition={{ duration: 0.5 }}
-            className="bg-white rounded-xl shadow-xl border border-gray-100 p-8 relative lg:sticky lg:top-24"
+            className="bg-white rounded-xl shadow-xl border border-gray-100 p-8 relative lg:sticky lg:top-24 hidden lg:block"
           >
             <iframe
               src="https://api.leadconnectorhq.com/widget/booking/Hc79fppD1agT3g9IbbQS"
@@ -82,6 +82,15 @@ const Contact: React.FC = () => {
               allowFullScreen
             ></iframe>
           </motion.div>
+
+          {/* Mobile Calendar - No Animation */}
+          <div className="bg-white rounded-xl shadow-xl border border-gray-100 p-8 relative lg:hidden">
+            <iframe
+              src="https://api.leadconnectorhq.com/widget/booking/Hc79fppD1agT3g9IbbQS"
+              style={{ width: '100%', height: '600px', border: 'none' }}
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
       </div>
     </section>
