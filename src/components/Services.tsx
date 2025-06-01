@@ -124,6 +124,31 @@ const Services: React.FC = () => {
           animate="animate"
           style={{ animationDelay: '1s' }}
         />
+        {/* Additional geometric stars for more visibility */}
+        <motion.div 
+          className="absolute top-10 left-1/2 w-2 h-2 bg-primary/40 rounded-full"
+          variants={floatingDotVariant}
+          animate="animate"
+          style={{ animationDelay: '2s' }}
+        />
+        <motion.div 
+          className="absolute bottom-10 right-1/3 w-3 h-3 bg-primary/30 rounded-full"
+          variants={floatingDotVariant}
+          animate="animate"
+          style={{ animationDelay: '3s' }}
+        />
+        <motion.div 
+          className="absolute top-1/2 left-10 w-2 h-2 bg-primary/20 rounded-full"
+          variants={floatingDotVariant}
+          animate="animate"
+          style={{ animationDelay: '1.5s' }}
+        />
+        <motion.div 
+          className="absolute bottom-1/4 right-10 w-2 h-2 bg-primary/30 rounded-full"
+          variants={floatingDotVariant}
+          animate="animate"
+          style={{ animationDelay: '2.5s' }}
+        />
       </div>
 
       {/* Background gradients */}

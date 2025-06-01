@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Plus, Minus } from 'lucide-react';
+import { geometricShapeVariant, floatingDotVariant } from '../utils/animations';
 
 const faqs = [
   {
@@ -45,6 +46,56 @@ const Faq: React.FC = () => {
     <section id="faq" className="section bg-dark text-white noise-bg section-gradient">
       {/* Background gradients */}
       <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark/95 to-dark"></div>
+
+      {/* Geometric Background Animations */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <motion.div 
+          className="absolute -top-20 -right-20 w-96 h-96 bg-gradient-to-br from-primary/20 to-transparent rounded-full blur-3xl"
+          variants={geometricShapeVariant}
+          animate="animate"
+        />
+        <motion.div 
+          className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-gradient-to-tr from-primary/10 to-transparent rounded-full blur-3xl"
+          variants={geometricShapeVariant}
+          animate="animate"
+        />
+        <motion.div 
+          className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary/30 rounded-full"
+          variants={floatingDotVariant}
+          animate="animate"
+        />
+        <motion.div 
+          className="absolute top-1/3 right-1/4 w-3 h-3 bg-primary/20 rounded-full"
+          variants={floatingDotVariant}
+          animate="animate"
+          style={{ animationDelay: '1s' }}
+        />
+        {/* Additional geometric stars for more visibility */}
+        <motion.div 
+          className="absolute top-10 left-1/2 w-2 h-2 bg-primary/40 rounded-full"
+          variants={floatingDotVariant}
+          animate="animate"
+          style={{ animationDelay: '2s' }}
+        />
+        <motion.div 
+          className="absolute bottom-10 right-1/3 w-3 h-3 bg-primary/30 rounded-full"
+          variants={floatingDotVariant}
+          animate="animate"
+          style={{ animationDelay: '3s' }}
+        />
+        <motion.div 
+          className="absolute top-1/2 left-10 w-2 h-2 bg-primary/20 rounded-full"
+          variants={floatingDotVariant}
+          animate="animate"
+          style={{ animationDelay: '1.5s' }}
+        />
+        <motion.div 
+          className="absolute bottom-1/4 right-10 w-2 h-2 bg-primary/30 rounded-full"
+          variants={floatingDotVariant}
+          animate="animate"
+          style={{ animationDelay: '2.5s' }}
+        />
+      </div>
 
       <div className="container-custom relative z-10">
         <div className="text-center mb-16">
