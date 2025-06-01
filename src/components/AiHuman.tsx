@@ -15,7 +15,7 @@ const AiHuman: React.FC = () => {
               Growth Formula
             </span>
             
-            <h2 className="text-3xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-8 leading-tight text-gray-900">
+            <h2 className="text-3xl lg:text-3xl xl:text-[2.75rem] font-bold mb-4 md:mb-8 leading-tight text-gray-900 whitespace-nowrap">
               Human <span className="text-primary">+</span> AI <span className="text-primary">=</span> Winning Machine
             </h2>
             
