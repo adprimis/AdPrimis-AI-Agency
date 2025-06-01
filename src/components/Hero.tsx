@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
     >
       {/* Background */}
       <div className="absolute inset-0 bg-dark overflow-hidden">
-        <div className="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-from)_0%,_var(--tw-gradient-to)_100%)] from-primary/50 to-transparent" style={{ height: '120%' }}></div>
+        <div className="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-from)_0%,_var(--tw-gradient-to)_100%)] from-primary/50 to-transparent" style={{ height: '100%' }}></div>
       </div>
 
       <div className="container-custom relative z-10">
