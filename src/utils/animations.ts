@@ -184,7 +184,7 @@ export const cardVariant: Variants = {
 export const geometricShapeVariant: Variants = {
   animate: {
     scale: [1, 1.1, 1],
-    opacity: [0.3, 0.6, 0.3],
+    opacity: [0.5, 0.9, 0.5],
     transition: {
       duration: 8,
       repeat: Infinity,
@@ -197,7 +197,7 @@ export const geometricShapeVariant: Variants = {
 export const floatingDotVariant: Variants = {
   animate: {
     y: [-10, 10, -10],
-    opacity: [0.3, 0.6, 0.3],
+    opacity: [0.5, 0.9, 0.5],
     transition: {
       duration: 4,
       repeat: Infinity,
