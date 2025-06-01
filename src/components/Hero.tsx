@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mb-4 mt-12"
+            className="mb-6 mt-12"
           >
             <div className="hero-label-container flex justify-center">
               <motion.span 
@@ -41,18 +41,18 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight mb-8 mt-8"
+            className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-[1.1] mb-6 mt-8"
           >
-            Cutting-Edge<br />
-            <span className="text-white whitespace-nowrap">AI Voice Agents That</span><br />
-            <span className="text-primary">Accelerate Deals</span>
+            <span className="block mb-2">Cutting-Edge</span>
+            <span className="text-white whitespace-nowrap block mb-2">AI Voice Agents That</span>
+            <span className="text-primary block">Accelerate Deals</span>
           </motion.h1>
           
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto"
+            className="text-lg md:text-xl text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed"
           >
             Our AI voice agents work 24/7 to answer every call, qualify leads, and follow up instantly — freeing you up to focus on real projects, not repetitive conversations.
           </motion.p>
@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-32 mt-4"
+            className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-32 mt-6"
           >
             <Link
               to="contact"
@@ -69,7 +69,7 @@ const Hero: React.FC = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              className="btn-primary"
+              className="btn-primary transform hover:scale-105 transition-transform duration-300"
               aria-label="Schedule a consultation"
             >
               Book a Consultation
@@ -81,10 +81,10 @@ const Hero: React.FC = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              className="btn-secondary"
+              className="btn-secondary transform hover:scale-105 transition-transform duration-300"
             >
               Hear AI in Action
-              <ArrowRight className="ml-2" size={18} />
+              <ArrowRight className="ml-2 inline-block" size={18} />
             </Link>
           </motion.div>
         </div>
