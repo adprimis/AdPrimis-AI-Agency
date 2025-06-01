@@ -29,7 +29,7 @@ const Contact: React.FC = () => {
             </span>
             
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Book Your <span className="text-primary">Strategy Call</span>
+              <span className="text-primary">Book a Strategy Call</span>
             </h2>
             
             <p className="text-gray-600 mb-8">
@@ -74,7 +74,7 @@ const Contact: React.FC = () => {
             initial={{ opacity: 0, x: 30 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
             transition={{ duration: 0.5 }}
-            className="bg-white rounded-xl shadow-xl border border-gray-100 p-8 relative sticky top-24"
+            className="bg-white rounded-xl shadow-xl border border-gray-100 p-8 relative lg:sticky lg:top-24"
           >
             <iframe
               src="https://api.leadconnectorhq.com/widget/booking/Hc79fppD1agT3g9IbbQS"
