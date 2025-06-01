@@ -15,11 +15,11 @@ const AiHuman: React.FC = () => {
               Growth Formula
             </span>
             
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4 md:mb-8 leading-tight text-gray-900">
+            <h2 className="text-3xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-8 leading-tight text-gray-900">
               Human <span className="text-primary">+</span> AI <span className="text-primary">=</span> Winning Machine
             </h2>
             
-            <p className="text-gray-600 text-base mb-10 leading-relaxed mt-2 md:mt-0">
+            <p className="text-gray-600 text-base lg:text-[1.05rem] mb-10 leading-relaxed mt-2 md:mt-0">
               Just as a high-performance engine needs premium fuel to reach its full 
               potential, AI voice agents need quality leads to work and maximize results. 
               The best fuel comes from combining human expertise with AI technology - 
@@ -88,7 +88,7 @@ const AiHuman: React.FC = () => {
             </div>
           </div>
           {/* Right Visualization (separate column for desktop) */}
-          <div className="w-full max-w-[420px] h-[420px] mx-auto lg:mx-0 relative shadow-sm mt-16 lg:mt-0 flex flex-col justify-center items-center bg-primary/10 rounded-2xl p-12">
+          <div className="w-full max-w-[520px] lg:max-w-[540px] h-[600px] lg:h-[660px] mx-auto lg:ml-16 relative shadow-sm mt-8 lg:mt-[-32px] flex flex-col justify-center items-center bg-primary/10 rounded-2xl p-6 lg:p-14">
             {/* Labels */}
             <div className="absolute top-6 left-6">
               <span className="px-4 py-1 bg-white rounded-md text-sm font-medium text-gray-700 shadow-sm">Human</span>
