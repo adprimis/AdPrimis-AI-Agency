@@ -178,12 +178,12 @@ const Services: React.FC = () => {
               </div>
 
               <div className="flex items-start gap-4 relative z-10">
-                <div className="p-3 rounded-lg bg-[#FF6B00]/10 group-hover:bg-[#FF6B00]/20 transition-all duration-300 relative overflow-hidden">
+                <div className="service-icon-container p-4 rounded-xl bg-[#FF6B00]/10 group-hover:bg-[#FF6B00]/20 transition-all duration-300 relative overflow-hidden">
                   {/* Icon background animation */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shine"></div>
                   </div>
-                  <service.icon className="w-6 h-6 text-[#FF6B00] transition-colors duration-300 relative z-10" />
+                  <service.icon className="w-7 h-7 text-[#FF6B00] transition-all duration-300 relative z-10 group-hover:scale-110 group-hover:rotate-3" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-2 text-black group-hover:text-[#FF6B00] transition-colors duration-300">
