@@ -88,7 +88,7 @@ const AiHuman: React.FC = () => {
             </div>
           </div>
           {/* Right Visualization (separate column for desktop) */}
-          <div className="w-full max-w-[520px] lg:max-w-[540px] h-[540px] lg:h-[580px] mx-auto lg:ml-16 relative shadow-sm mt-8 lg:mt-[-80px] flex flex-col justify-center items-center bg-primary/10 rounded-2xl p-6 lg:p-14">
+          <div className="w-full max-w-[520px] lg:max-w-[540px] h-[540px] lg:h-[580px] mx-auto lg:ml-16 relative shadow-sm mt-8 lg:mt-[-48px] flex flex-col justify-center items-center bg-primary/10 rounded-2xl p-6 lg:p-14">
             {/* Labels */}
             <div className="absolute top-6 left-6">
               <span className="px-4 py-1 bg-white rounded-md text-sm font-medium text-gray-700 shadow-sm">Human</span>
