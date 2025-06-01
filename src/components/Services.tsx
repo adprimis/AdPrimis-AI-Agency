@@ -94,13 +94,15 @@ const Services: React.FC = () => {
   return (
     <motion.section
       ref={ref}
-      variants={sectionBgVariant}
-      initial="hidden"
-      animate={inView ? "visible" : "hidden"}
       className="section bg-dark text-white relative noise-bg section-gradient overflow-hidden pt-8 md:pt-12"
     >
       {/* Geometric Background Animations */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <motion.div 
+        className="absolute inset-0 overflow-hidden pointer-events-none"
+        initial={{ opacity: 0 }}
+        animate={inView ? { opacity: 1 } : { opacity: 0 }}
+        transition={{ duration: 0.5 }}
+      >
         <motion.div 
           className="absolute -top-20 -right-20 w-96 h-96 bg-gradient-to-br from-primary/20 to-transparent rounded-full blur-3xl"
           variants={geometricShapeVariant}
@@ -149,7 +151,7 @@ const Services: React.FC = () => {
           animate="animate"
           style={{ animationDelay: '2.5s' }}
         />
-      </div>
+      </motion.div>
 
       {/* Background gradients */}
       <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark/95 to-dark"></div>

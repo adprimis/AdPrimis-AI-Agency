@@ -48,7 +48,12 @@ const Faq: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark/95 to-dark"></div>
 
       {/* Geometric Background Animations */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <motion.div 
+        className="absolute inset-0 overflow-hidden pointer-events-none"
+        initial={{ opacity: 0 }}
+        animate={inView ? { opacity: 1 } : { opacity: 0 }}
+        transition={{ duration: 0.5 }}
+      >
         <motion.div 
           className="absolute -top-20 -right-20 w-96 h-96 bg-gradient-to-br from-primary/20 to-transparent rounded-full blur-3xl"
           variants={geometricShapeVariant}
@@ -95,7 +100,7 @@ const Faq: React.FC = () => {
           animate="animate"
           style={{ animationDelay: '2.5s' }}
         />
-      </div>
+      </motion.div>
 
       <div className="container-custom relative z-10">
         <div className="text-center mb-16">
