@@ -21,11 +21,11 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mb-6 mt-16"
+            className="mb-4 mt-12"
           >
-            <div className="hero-label-container">
+            <div className="hero-label-container flex justify-center">
               <motion.span 
-                className="inline-block px-4 py-1.5 rounded-full text-sm sm:text-base md:text-lg font-medium bg-gray-800/60 text-white mb-4 border border-primary whitespace-nowrap"
+                className="inline-block px-3 py-1 rounded-full text-xs sm:text-sm md:text-base font-medium bg-gray-800/60 text-white mb-4 border border-primary whitespace-nowrap"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
