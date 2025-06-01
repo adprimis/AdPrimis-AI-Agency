@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mb-8 mt-8"
+            className="mb-4 mt-8 md:mb-8"
           >
             <div className="hero-label-container flex justify-center">
               <motion.span 
@@ -42,11 +42,11 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-[1.1] mb-8 mt-8"
+            className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-[1.1] mb-4 mt-4 md:mb-8 md:mt-8"
           >
-            <span className="block mb-4">Cutting-Edge</span>
+            <span className="block mb-2 md:mb-4">Cutting-Edge</span>
             <div className="flex justify-center">
-              <span className="text-white whitespace-nowrap block mb-4">AI Voice Agents That</span>
+              <span className="text-white whitespace-nowrap block mb-2 md:mb-4">AI Voice Agents That</span>
             </div>
             <span className="text-primary block">Accelerate Deals</span>
           </motion.h1>
@@ -55,7 +55,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-lg md:text-xl text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-white/80 mb-6 md:mb-12 max-w-2xl mx-auto leading-relaxed"
           >
             Our AI voice agents work 24/7 to answer every call, qualify leads, and follow up instantly — freeing you up to focus on real projects, not repetitive conversations.
           </motion.p>
@@ -64,7 +64,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-16 mt-6"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-8 mb-8 md:mb-16 mt-4 md:mt-6"
           >
             <Link
               to="contact"
