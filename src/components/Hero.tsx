@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Hero: React.FC = () => {
   return (
@@ -16,35 +17,59 @@ const Hero: React.FC = () => {
       <div className="container-custom relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Title Badge */}
-          <div className="mb-6 mt-16">
-            <div className="hero-label-container">
-              <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-gray-800/60 text-white mb-4 border border-primary">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-6 mt-8 sm:mt-16"
+          >
+            <div className="hero-label-container max-w-[85%] sm:max-w-none mx-auto">
+              <motion.span 
+                className="inline-block px-2.5 sm:px-4 py-1 sm:py-1.5 rounded-full text-[12px] sm:text-base md:text-lg font-medium bg-gray-800/60 text-white mb-4 border border-primary leading-tight sm:leading-normal transform hover:scale-105 transition-transform duration-300"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 <span className="relative z-10 tracking-wide">
                   Revolutionizing Business Communication & Sales
                 </span>
-              </span>
+              </motion.span>
             </div>
-          </div>
+          </motion.div>
 
           {/* Main heading */}
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight mb-6">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight mb-4 sm:mb-6"
+          >
             Cutting-Edge<br />
             <span className="text-white">AI Voice Agents That</span><br />
             <span className="text-primary">Accelerate Deals</span>
-          </h1>
+          </motion.h1>
           
-          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-base sm:text-lg md:text-xl text-white/80 mb-6 sm:mb-8 max-w-2xl mx-auto px-4 sm:px-0"
+          >
             Our AI voice agents work 24/7 to answer every call, qualify leads, and follow up instantly — freeing you up to focus on real projects, not repetitive conversations.
-          </p>
+          </motion.p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-32">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-24 sm:mb-32 px-4 sm:px-0"
+          >
             <Link
               to="contact"
               spy={true}
               smooth={true}
               offset={-70}
               duration={500}
-              className="btn-primary"
+              className="btn-primary w-full sm:w-auto text-sm sm:text-base"
               aria-label="Schedule a consultation"
             >
               Book a Consultation
@@ -56,12 +81,12 @@ const Hero: React.FC = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              className="btn-secondary"
+              className="btn-secondary w-full sm:w-auto text-sm sm:text-base"
             >
               Hear AI in Action
-              <ArrowRight className="ml-2" size={18} />
+              <ArrowRight className="ml-2 inline-block" size={16} />
             </Link>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
