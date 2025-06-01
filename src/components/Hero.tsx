@@ -21,11 +21,11 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mb-6 mt-8 sm:mt-16"
+            className="mb-6 mt-16"
           >
-            <div className="hero-label-container max-w-[85%] sm:max-w-none mx-auto">
+            <div className="hero-label-container">
               <motion.span 
-                className="inline-block px-2.5 sm:px-4 py-1 sm:py-1.5 rounded-full text-[12px] sm:text-base md:text-lg font-medium bg-gray-800/60 text-white mb-4 border border-primary leading-tight sm:leading-normal transform hover:scale-105 transition-transform duration-300"
+                className="inline-block px-4 py-1.5 rounded-full text-sm sm:text-base md:text-lg font-medium bg-gray-800/60 text-white mb-4 border border-primary whitespace-nowrap"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight mb-4 sm:mb-6"
+            className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight mb-6"
           >
             Cutting-Edge<br />
             <span className="text-white">AI Voice Agents That</span><br />
@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-base sm:text-lg md:text-xl text-white/80 mb-6 sm:mb-8 max-w-2xl mx-auto px-4 sm:px-0"
+            className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto"
           >
             Our AI voice agents work 24/7 to answer every call, qualify leads, and follow up instantly — freeing you up to focus on real projects, not repetitive conversations.
           </motion.p>
@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-24 sm:mb-32 px-4 sm:px-0"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-32"
           >
             <Link
               to="contact"
@@ -69,7 +69,7 @@ const Hero: React.FC = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              className="btn-primary w-full sm:w-auto text-sm sm:text-base"
+              className="btn-primary"
               aria-label="Schedule a consultation"
             >
               Book a Consultation
@@ -81,10 +81,10 @@ const Hero: React.FC = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              className="btn-secondary w-full sm:w-auto text-sm sm:text-base"
+              className="btn-secondary"
             >
               Hear AI in Action
-              <ArrowRight className="ml-2 inline-block" size={16} />
+              <ArrowRight className="ml-2" size={18} />
             </Link>
           </motion.div>
         </div>
