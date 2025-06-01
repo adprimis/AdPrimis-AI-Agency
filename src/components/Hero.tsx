@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
             className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight mb-6"
           >
             Cutting-Edge<br />
-            <span className="text-white">AI Voice Agents That</span><br />
+            <span className="text-white whitespace-nowrap">AI Voice Agents That</span><br />
             <span className="text-primary">Accelerate Deals</span>
           </motion.h1>
           
