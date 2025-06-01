@@ -222,3 +222,13 @@ body {
   opacity: 1;
   animation: iconFloat 2s ease-in-out infinite;
 }
+
+.blur-element-top-right {
+  width: 16rem; /* 256px */
+  height: 16rem; /* 256px */
+}
+
+.blur-element-bottom-left {
+  width: 18rem; /* 288px */
+  height: 18rem; /* 288px */
+}
