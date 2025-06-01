@@ -11,15 +11,15 @@ const AiHuman: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-20 items-start">
           {/* Left Content */}
           <div className="flex-1 max-w-2xl">
-            <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium text-primary bg-primary/10 mb-4">
+            <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium text-primary bg-primary/10 mb-4 mt-0 md:mt-4">
               Growth Formula
             </span>
             
-            <h2 className="text-3xl lg:text-4xl font-bold mb-8 leading-tight text-gray-900">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4 md:mb-8 leading-tight text-gray-900">
               Human <span className="text-primary">+</span> AI <span className="text-primary">=</span> Winning Machine
             </h2>
             
-            <p className="text-gray-600 text-base mb-10 leading-relaxed">
+            <p className="text-gray-600 text-base mb-10 leading-relaxed mt-2 md:mt-0">
               Just as a high-performance engine needs premium fuel to reach its full 
               potential, AI voice agents need quality leads to work and maximize results. 
               The best fuel comes from combining human expertise with AI technology - 
