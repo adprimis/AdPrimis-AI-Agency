@@ -11,7 +11,9 @@ const AiHuman: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-20 items-start">
           {/* Left Content */}
           <div className="flex-1 max-w-2xl">
-            <h4 className="text-primary/80 font-medium mb-3">Growth Formula</h4>
+            <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium text-primary bg-primary/10 mb-4">
+              Growth Formula
+            </span>
             
             <h2 className="text-3xl lg:text-4xl font-bold mb-8 leading-tight text-gray-900">
               Human <span className="text-primary">+</span> AI <span className="text-primary">=</span> Winning Machine
@@ -85,7 +87,7 @@ const AiHuman: React.FC = () => {
               </a>
 
               {/* Right Visualization */}
-              <div className="bg-gray-50 rounded-2xl p-8 w-full lg:w-auto lg:flex-1 relative shadow-sm mt-8 lg:mt-0">
+              <div className="bg-gray-50 rounded-2xl p-8 w-full lg:w-auto lg:flex-1 relative shadow-sm mt-16 lg:mt-0">
                 {/* Labels */}
                 <div className="absolute top-6 left-6">
                   <span className="px-4 py-1 bg-white rounded-md text-sm font-medium text-gray-700 shadow-sm">Human</span>
