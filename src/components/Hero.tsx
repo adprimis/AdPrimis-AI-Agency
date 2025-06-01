@@ -25,10 +25,11 @@ const Hero: React.FC = () => {
           >
             <div className="hero-label-container flex justify-center">
               <motion.span 
-                className="inline-block px-3 py-1 rounded-full text-xs sm:text-sm md:text-base font-medium bg-gray-800/60 text-white mb-4 border border-primary whitespace-nowrap"
+                className="inline-block px-3 py-1 rounded-full text-xs sm:text-sm md:text-base font-medium bg-gray-800/60 text-white mb-4 border border-primary whitespace-nowrap relative animate-pulse-slow"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
+                <span className="absolute inset-0 rounded-full border-2 border-primary animate-glow"></span>
                 <span className="relative z-10 tracking-wide">
                   Revolutionizing Business Communication & Sales
                 </span>
@@ -54,7 +55,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-lg md:text-xl text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed"
           >
             Our AI voice agents work 24/7 to answer every call, qualify leads, and follow up instantly — freeing you up to focus on real projects, not repetitive conversations.
           </motion.p>
@@ -63,7 +64,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-32 mt-6"
+            className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-16 mt-4"
           >
             <Link
               to="contact"
