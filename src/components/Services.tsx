@@ -97,7 +97,7 @@ const Services: React.FC = () => {
       variants={sectionBgVariant}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
-      className="section bg-dark text-white relative noise-bg section-gradient overflow-hidden"
+      className="section bg-dark text-white relative noise-bg section-gradient overflow-hidden pt-8 md:pt-12"
     >
       {/* Geometric Background Animations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">

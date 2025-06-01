@@ -84,7 +84,7 @@ const Contact: React.FC = () => {
           </motion.div>
 
           {/* Mobile Calendar - No Animation */}
-          <div className="bg-white rounded-xl shadow-xl border border-gray-100 p-8 relative lg:hidden">
+          <div id="calendar" className="bg-white rounded-xl shadow-xl border border-gray-100 p-8 relative lg:hidden">
             <iframe
               src="https://api.leadconnectorhq.com/widget/booking/Hc79fppD1agT3g9IbbQS"
               style={{ width: '100%', height: '600px', border: 'none' }}
