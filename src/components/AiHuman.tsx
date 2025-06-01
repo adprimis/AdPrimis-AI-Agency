@@ -81,36 +81,35 @@ const AiHuman: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex flex-col lg:flex-row items-center lg:items-start mt-10 gap-8">
+            <div className="flex flex-col items-center lg:items-start mt-10 gap-8">
               <a href="#calendar" className="btn-primary px-8">
                 Supercharge Your Business
               </a>
+            </div>
+          </div>
+          {/* Right Visualization (separate column for desktop) */}
+          <div className="w-full max-w-[420px] h-[420px] mx-auto lg:mx-0 relative shadow-sm mt-16 lg:mt-0 flex flex-col justify-center items-center bg-primary/10 rounded-2xl p-12">
+            {/* Labels */}
+            <div className="absolute top-6 left-6">
+              <span className="px-4 py-1 bg-white rounded-md text-sm font-medium text-gray-700 shadow-sm">Human</span>
+            </div>
+            <div className="absolute top-6 right-6">
+              <span className="px-4 py-1 bg-white rounded-md text-sm font-medium text-gray-700 shadow-sm">AI</span>
+            </div>
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2">
+              <span className="px-4 py-1 bg-white rounded-md text-sm font-medium text-gray-700 shadow-sm">Growth</span>
+            </div>
 
-              {/* Right Visualization */}
-              <div className="bg-primary/10 rounded-2xl p-12 w-full max-w-[420px] h-[420px] mx-auto lg:mx-0 relative shadow-sm mt-16 lg:mt-0 flex flex-col justify-center items-center">
-                {/* Labels */}
-                <div className="absolute top-6 left-6">
-                  <span className="px-4 py-1 bg-white rounded-md text-sm font-medium text-gray-700 shadow-sm">Human</span>
-                </div>
-                <div className="absolute top-6 right-6">
-                  <span className="px-4 py-1 bg-white rounded-md text-sm font-medium text-gray-700 shadow-sm">AI</span>
-                </div>
-                <div className="absolute bottom-6 left-1/2 -translate-x-1/2">
-                  <span className="px-4 py-1 bg-white rounded-md text-sm font-medium text-gray-700 shadow-sm">Growth</span>
-                </div>
-
-                {/* Circle Visualization */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="relative w-72 h-72">
-                    {/* Left Half Circle */}
-                    <div className="absolute left-0 top-0 w-36 h-72 bg-primary/20 rounded-l-full"></div>
-                    {/* Right Half Circle */}
-                    <div className="absolute right-0 top-0 w-36 h-72 bg-primary/20 rounded-r-full"></div>
-                    {/* Growth Arrow */}
-                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
-                      <TrendingUp className="w-8 h-8 text-primary transform rotate-45" />
-                    </div>
-                  </div>
+            {/* Circle Visualization */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="relative w-72 h-72">
+                {/* Left Half Circle */}
+                <div className="absolute left-0 top-0 w-36 h-72 bg-primary/20 rounded-l-full"></div>
+                {/* Right Half Circle */}
+                <div className="absolute right-0 top-0 w-36 h-72 bg-primary/20 rounded-r-full"></div>
+                {/* Growth Arrow */}
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
+                  <TrendingUp className="w-8 h-8 text-primary transform rotate-45" />
                 </div>
               </div>
             </div>
