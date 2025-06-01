@@ -44,9 +44,7 @@ const Faq: React.FC = () => {
   return (
     <section id="faq" className="section bg-dark text-white noise-bg section-gradient">
       {/* Background gradients */}
-      <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark/95 to-dark">
-        <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-from)_0%,_var(--tw-gradient-to)_100%)] from-primary/40 to-transparent"></div>
-      </div>
+      <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark/95 to-dark"></div>
 
       <div className="container-custom relative z-10">
         <div className="text-center mb-16">
