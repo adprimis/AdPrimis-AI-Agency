@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
   return (
     <section 
       id="hero" 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-12 pb-8 md:pt-16 md:pb-12 noise-bg section-gradient"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-4 pb-8 md:pt-16 md:pb-12 noise-bg section-gradient"
     >
       {/* Background */}
       <div className="absolute inset-0 bg-dark overflow-hidden">
@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mb-4 mt-8 md:mb-8"
+            className="mb-4 mt-2 md:mt-8 md:mb-8"
           >
             <div className="hero-label-container flex justify-center">
               <motion.span 
