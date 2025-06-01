@@ -70,10 +70,11 @@ const Contact: React.FC = () => {
           </motion.div>
           
           <motion.div
+            id="calendar"
             initial={{ opacity: 0, x: 30 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
             transition={{ duration: 0.5 }}
-            className="bg-white rounded-xl shadow-xl border border-gray-100 p-8 relative"
+            className="bg-white rounded-xl shadow-xl border border-gray-100 p-8 relative sticky top-24"
           >
             <iframe
               src="https://api.leadconnectorhq.com/widget/booking/Hc79fppD1agT3g9IbbQS"
