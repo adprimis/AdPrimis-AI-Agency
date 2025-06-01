@@ -248,7 +248,7 @@ const Services: React.FC = () => {
               className="hidden md:block w-full max-w-[300px] h-[2px] relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-[#FF6B00]/20"></div>
-              <div className="shiny-line absolute inset-0"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#FF6B00] to-transparent animate-shine"></div>
             </motion.div>
 
             <motion.h2 
@@ -272,7 +272,7 @@ const Services: React.FC = () => {
               className="hidden md:block w-full max-w-[300px] h-[2px] relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-[#FF6B00]/20"></div>
-              <div className="shiny-line absolute inset-0 delay-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#FF6B00] to-transparent animate-shine"></div>
             </motion.div>
           </div>
         </div>
@@ -285,7 +285,7 @@ const Services: React.FC = () => {
             <motion.div
               key={index}
               variants={cardVariant}
-              className="relative text-center rounded-xl p-6 pt-12 border border-[#FF6B00]/20 hover:border-[#FF6B00] transition-all duration-300 cursor-pointer group bg-dark/50 backdrop-blur-sm"
+              className="relative text-center rounded-xl p-6 pt-12 border border-[#FF6B00] transition-all duration-300 cursor-pointer group bg-dark/50 backdrop-blur-sm"
             >
               <motion.div 
                 className="absolute -top-5 left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-[#FF6B00] text-white flex items-center justify-center font-bold text-lg z-10"
@@ -315,10 +315,10 @@ const Services: React.FC = () => {
                 {step.description}
               </motion.p>
 
-              {/* Hover Glow Effect */}
-              <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+              {/* Always visible glow effect */}
+              <div className="absolute inset-0 rounded-xl pointer-events-none">
                 <div className="absolute inset-0 bg-[#FF6B00]/5 rounded-xl"></div>
-                <div className="absolute inset-0 rounded-xl ring-1 ring-[#FF6B00]/20 group-hover:ring-[#FF6B00]/40"></div>
+                <div className="absolute inset-0 rounded-xl ring-1 ring-[#FF6B00]/40"></div>
               </div>
             </motion.div>
           ))}
