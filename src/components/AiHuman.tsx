@@ -87,7 +87,7 @@ const AiHuman: React.FC = () => {
               </a>
 
               {/* Right Visualization */}
-              <div className="bg-gray-50 rounded-2xl p-8 w-full lg:w-auto lg:flex-1 relative shadow-sm mt-16 lg:mt-0">
+              <div className="bg-primary/10 rounded-2xl p-12 w-full max-w-[420px] h-[420px] mx-auto lg:mx-0 relative shadow-sm mt-16 lg:mt-0 flex flex-col justify-center items-center">
                 {/* Labels */}
                 <div className="absolute top-6 left-6">
                   <span className="px-4 py-1 bg-white rounded-md text-sm font-medium text-gray-700 shadow-sm">Human</span>
