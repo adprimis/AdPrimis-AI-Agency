@@ -8,7 +8,7 @@ const AiHuman: React.FC = () => {
       <div className="absolute inset-0 bg-white opacity-95"></div>
       
       <div className="container-custom relative z-10">
-        <div className="flex flex-col lg:flex-row gap-20 items-stretch">
+        <div className="flex flex-col lg:flex-row gap-20 items-start">
           {/* Left Content */}
           <div className="flex-1 max-w-2xl">
             <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium text-primary bg-primary/10 mb-4 mt-0 md:mt-4">
@@ -88,7 +88,7 @@ const AiHuman: React.FC = () => {
             </div>
           </div>
           {/* Right Visualization (separate column for desktop) */}
-          <div className="w-full max-w-[520px] lg:max-w-[540px] h-[540px] lg:h-[580px] mx-auto lg:ml-16 relative shadow-sm mt-8 lg:mt-0 flex flex-col justify-center items-center bg-primary/10 rounded-2xl p-6 lg:p-14">
+          <div className="w-full max-w-[520px] lg:max-w-[540px] h-[540px] lg:h-[580px] mx-auto lg:ml-16 relative shadow-sm mt-8 lg:mt-16 flex flex-col justify-center items-center bg-primary/10 rounded-2xl p-6 lg:p-14">
             {/* Labels */}
             <div className="absolute top-6 left-6">
               <span className="px-4 py-1 bg-white rounded-md text-sm font-medium text-gray-700 shadow-sm">Human</span>
