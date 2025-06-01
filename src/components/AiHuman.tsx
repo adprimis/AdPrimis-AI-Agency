@@ -15,11 +15,11 @@ const AiHuman: React.FC = () => {
               Growth Formula
             </span>
             
-            <h2 className="text-3xl md:text-4xl xl:text-[2.75rem] font-bold mb-6 leading-tight text-gray-900 whitespace-nowrap">
+            <h2 className="text-3xl lg:text-3xl xl:text-[2.75rem] font-bold mb-4 md:mb-8 leading-tight text-gray-900 whitespace-nowrap">
               Human <span className="text-primary">+</span> AI <span className="text-primary">=</span> Winning Machine
             </h2>
             
-            <p className="text-gray-600 text-base mb-10 leading-relaxed mt-2 md:mt-0">
+            <p className="text-gray-600 text-base lg:text-[1.05rem] mb-10 leading-relaxed mt-2 md:mt-0">
               Just as a high-performance engine needs premium fuel to reach its full 
               potential, AI voice agents need quality leads to work and maximize results. 
               The best fuel comes from combining human expertise with AI technology - 
@@ -82,13 +82,13 @@ const AiHuman: React.FC = () => {
             </div>
 
             <div className="flex flex-col items-center lg:items-start mt-10 gap-8">
-              <a href="#calendar" className="btn-primary px-6 py-3">
+              <a href="#calendar" className="btn-primary px-8">
                 Supercharge Your Business
               </a>
             </div>
           </div>
           {/* Right Visualization (separate column for desktop) */}
-          <div className="w-full max-w-[520px] lg:max-w-[540px] aspect-square mx-auto lg:ml-16 relative shadow-sm mt-8 lg:mt-48 flex flex-col justify-center items-center bg-primary/10 rounded-2xl p-6 lg:p-14">
+          <div className="w-full max-w-[520px] lg:max-w-[540px] h-[540px] lg:h-[580px] mx-auto lg:ml-16 relative shadow-sm mt-8 lg:mt-48 flex flex-col justify-center items-center bg-primary/10 rounded-2xl p-6 lg:p-14">
             {/* Labels */}
             <div className="absolute top-6 left-6">
               <span className="px-4 py-1 bg-white rounded-md text-sm font-medium text-gray-700 shadow-sm">Human</span>
@@ -102,11 +102,11 @@ const AiHuman: React.FC = () => {
 
             {/* Circle Visualization */}
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="relative w-3/5 h-3/5">
+              <div className="relative w-72 h-72">
                 {/* Left Half Circle */}
-                <div className="absolute left-0 top-0 w-[45%] h-full bg-primary/20 rounded-l-full"></div>
+                <div className="absolute left-0 top-0 w-36 h-72 bg-primary/20 rounded-l-full"></div>
                 {/* Right Half Circle */}
-                <div className="absolute right-0 top-0 w-[45%] h-full bg-primary/20 rounded-r-full"></div>
+                <div className="absolute right-0 top-0 w-36 h-72 bg-primary/20 rounded-r-full"></div>
                 {/* Growth Arrow */}
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
                   <TrendingUp className="w-8 h-8 text-primary transform rotate-45" />
