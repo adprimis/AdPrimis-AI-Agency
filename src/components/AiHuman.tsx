@@ -1,5 +1,8 @@
 import React from 'react';
-import { Circle, Zap, TrendingUp } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import { Circle, Zap, TrendingUp, Users, BarChart3 } from 'lucide-react';
+import { Link } from 'react-scroll';
 
 const AiHuman: React.FC = () => {
   return (
@@ -82,9 +85,16 @@ const AiHuman: React.FC = () => {
             </div>
 
             <div className="flex flex-col items-center lg:items-start mt-8 md:mt-12 gap-8">
-              <a href="#calendar" className="btn-primary px-8">
+              <Link
+                to="calendar"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                className="btn-primary px-8 transform hover:scale-105 transition-transform duration-300"
+              >
                 Supercharge Your Business
-              </a>
+              </Link>
             </div>
           </div>
           {/* Right Visualization (separate column for desktop) */}
