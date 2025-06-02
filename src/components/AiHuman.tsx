@@ -107,7 +107,7 @@ const AiHuman: React.FC = () => {
           {/* Right Content - Visualization Box */}
           <div className="w-full max-w-[400px] sm:max-w-[450px] lg:max-w-[520px] h-[400px] sm:h-[450px] lg:h-[540px] mx-auto lg:ml-16 relative shadow-sm mt-6 md:mt-8 lg:mt-48 flex flex-col items-center bg-black rounded-2xl p-4 sm:p-6 lg:p-14">
             {/* Title Section */}
-            <div className="text-center mb-3 sm:mb-2 mt-4 sm:mt-6">
+            <div className="text-center mb-3 sm:mb-2 mt-4 sm:mt-6 lg:-mt-8">
               <h3 className="text-xl sm:text-2xl font-bold text-white mb-1.5 sm:mb-2 tracking-tight">Victory System</h3>
               <p 
                 className="text-primary text-[10px] sm:text-xs font-medium tracking-wide animate-pulse-slow relative" 
