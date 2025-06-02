@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Circle, Zap, TrendingUp, Users, BarChart3 } from 'lucide-react';
 import { Link } from 'react-scroll';
+import VictorySystem from './VictorySystem';
 
 const AiHuman: React.FC = () => {
   return (
@@ -97,30 +98,18 @@ const AiHuman: React.FC = () => {
               </Link>
             </div>
           </div>
-          {/* Right Visualization (separate column for desktop) */}
-          <div className="w-full max-w-[520px] lg:max-w-[540px] h-[540px] lg:h-[580px] mx-auto lg:ml-16 relative shadow-sm mt-6 md:mt-8 lg:mt-48 flex flex-col justify-center items-center bg-primary/10 rounded-2xl p-6 lg:p-14">
-            {/* Labels */}
-            <div className="absolute top-6 left-6">
-              <span className="px-4 py-1 bg-white rounded-md text-sm font-medium text-gray-700 shadow-sm">Human</span>
-            </div>
-            <div className="absolute top-6 right-6">
-              <span className="px-4 py-1 bg-white rounded-md text-sm font-medium text-gray-700 shadow-sm">AI</span>
-            </div>
-            <div className="absolute bottom-6 left-1/2 -translate-x-1/2">
-              <span className="px-4 py-1 bg-white rounded-md text-sm font-medium text-gray-700 shadow-sm">Growth</span>
+          {/* Right Content - Visualization Box */}
+          <div className="w-full max-w-[520px] lg:max-w-[540px] h-[540px] lg:h-[580px] mx-auto lg:ml-16 relative shadow-sm mt-6 md:mt-8 lg:mt-48 flex flex-col items-center bg-black rounded-2xl p-6 lg:p-14 overflow-hidden">
+            {/* Title Section */}
+            <div className="text-center mb-2 -mt-4">
+              <h3 className="text-2xl font-bold text-white mb-2">Victory System</h3>
+              <p className="text-primary/80 text-sm">Human + AI Powered</p>
             </div>
 
-            {/* Circle Visualization */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="relative w-72 h-72">
-                {/* Left Half Circle */}
-                <div className="absolute left-0 top-0 w-36 h-72 bg-primary/20 rounded-l-full"></div>
-                {/* Right Half Circle */}
-                <div className="absolute right-0 top-0 w-36 h-72 bg-primary/20 rounded-r-full"></div>
-                {/* Growth Arrow */}
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
-                  <TrendingUp className="w-8 h-8 text-primary transform rotate-45" />
-                </div>
+            {/* Victory System Visualization */}
+            <div className="w-full h-full flex items-center justify-center px-8 mt-16">
+              <div className="w-[50%] h-[50%]">
+                <VictorySystem />
               </div>
             </div>
           </div>

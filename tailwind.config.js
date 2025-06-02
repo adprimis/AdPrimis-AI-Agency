@@ -14,6 +14,9 @@ export default {
         dark: 'rgb(var(--color-dark) / <alpha-value>)',
         light: 'rgb(var(--color-light) / <alpha-value>)',
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
       keyframes: {
         shimmer: {
           '0%, 100%': { opacity: 1 },

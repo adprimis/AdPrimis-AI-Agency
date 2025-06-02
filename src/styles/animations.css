@@ -255,4 +255,94 @@
     transition-duration: 0.001ms !important;
     animation-duration: 0.001ms !important;
   }
+}
+
+/* Solar System Animations */
+@keyframes orbit {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Real orbital periods (scaled down for animation) */
+.animate-orbit-mercury { animation: orbit 2.4s linear infinite; }  /* Scaled 88 days */
+.animate-orbit-venus { animation: orbit 6.2s linear infinite; }      /* Scaled 225 days */
+.animate-orbit-earth { animation: orbit 10s linear infinite; }       /* Scaled 365 days */
+.animate-orbit-mars { animation: orbit 18.8s linear infinite; }       /* Scaled 687 days */
+.animate-orbit-jupiter { animation: orbit 118.7s linear infinite; } /* Scaled 4331 days */
+.animate-orbit-saturn { animation: orbit 294.6s linear infinite; } /* Scaled 10747 days */
+.animate-orbit-uranus { animation: orbit 840.1s linear infinite; } /* Scaled 30589 days */
+.animate-orbit-neptune { animation: orbit 1647.9s linear infinite; } /* Scaled 59800 days */
+
+@keyframes sun-glow {
+  0%, 100% { 
+    opacity: 1; 
+    transform: scale(1);
+    box-shadow: 0 0 60px 20px #ff9900, 0 0 120px 40px #ff990055;
+  }
+  50% { 
+    opacity: 0.8; 
+    transform: scale(1.05);
+    box-shadow: 0 0 80px 30px #ff9900, 0 0 160px 60px #ff990055;
+  }
+}
+
+.animate-sun-glow { animation: sun-glow 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin 8s linear infinite;
+}
+
+/* Victory System Animations */
+@keyframes victory-glow {
+  0%, 100% { 
+    opacity: 1; 
+    transform: scale(1);
+    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.5));
+  }
+  50% { 
+    opacity: 0.9; 
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.7));
+  }
+}
+
+.victory-sun {
+  animation: victory-glow 3s ease-in-out infinite;
+}
+
+@keyframes orbit-glow {
+  0%, 100% {
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  }
+}
+
+.orbit-path {
+  animation: orbit-glow 4s ease-in-out infinite;
+}
+
+@keyframes planet-shine {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+  }
+}
+
+.victory-planet {
+  animation: planet-shine 3s ease-in-out infinite;
 } 
