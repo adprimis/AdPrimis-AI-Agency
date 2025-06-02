@@ -11,15 +11,15 @@ const AiHuman: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-20 items-start">
           {/* Left Content */}
           <div className="flex-1 max-w-2xl">
-            <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium text-primary bg-primary/10 mb-4 mt-0 md:mt-4">
+            <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium text-primary bg-primary/10 mb-6">
               Growth Formula
             </span>
             
-            <h2 className="text-2xl sm:text-3xl lg:text-3xl xl:text-[2.75rem] font-bold mb-4 md:mb-8 leading-tight text-gray-900 whitespace-nowrap">
+            <h2 className="text-2xl sm:text-3xl lg:text-3xl xl:text-[2.75rem] font-bold mb-6 md:mb-8 leading-tight text-gray-900">
               Human <span className="text-primary">+</span> AI <span className="text-primary">=</span> Winning Machine
             </h2>
             
-            <p className="text-gray-600 text-sm sm:text-base lg:text-[1.05rem] mb-10 leading-relaxed mt-2 md:mt-0">
+            <p className="text-gray-600 text-sm sm:text-base lg:text-[1.05rem] mb-12 leading-relaxed max-w-2xl">
               Just as a high-performance engine needs premium fuel to reach its full 
               potential, AI voice agents need quality leads to work and maximize results. 
               The best fuel comes from combining human expertise with AI technology - 
@@ -28,16 +28,16 @@ const AiHuman: React.FC = () => {
               as an optional power boost to supercharge your growth.
             </p>
 
-            <div className="space-y-8">
+            <div className="space-y-10">
               {/* Premium Fuel */}
-              <div className="flex gap-5">
+              <div className="flex gap-6">
                 <div className="flex-shrink-0">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <Circle className="w-5 h-5 text-primary" />
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <Circle className="w-6 h-6 text-primary" />
                   </div>
                 </div>
-                <div>
-                  <h3 className="text-base sm:text-lg font-semibold mb-2 text-gray-900">The Power of Premium Fuel</h3>
+                <div className="flex-1">
+                  <h3 className="text-base sm:text-lg font-semibold mb-3 text-gray-900">The Power of Premium Fuel</h3>
                   <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                     Quality leads are the essential fuel that powers AI voice agents to 
                     realize calls. The better the leads, the more appointments booked - 
@@ -47,14 +47,14 @@ const AiHuman: React.FC = () => {
               </div>
 
               {/* Human-AI Production */}
-              <div className="flex gap-5">
+              <div className="flex gap-6">
                 <div className="flex-shrink-0">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <Zap className="w-5 h-5 text-primary" />
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <Zap className="w-6 h-6 text-primary" />
                   </div>
                 </div>
-                <div>
-                  <h3 className="text-base sm:text-lg font-semibold mb-2 text-gray-900">Human-AI Fuel Production</h3>
+                <div className="flex-1">
+                  <h3 className="text-base sm:text-lg font-semibold mb-3 text-gray-900">Human-AI Fuel Production</h3>
                   <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                     The finest leads come from the synergy of human media buying 
                     expertise and AI optimization. This combination fine-tunes ad 
@@ -64,14 +64,14 @@ const AiHuman: React.FC = () => {
               </div>
 
               {/* Turbo Boost */}
-              <div className="flex gap-5">
+              <div className="flex gap-6">
                 <div className="flex-shrink-0">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <TrendingUp className="w-5 h-5 text-primary" />
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <TrendingUp className="w-6 h-6 text-primary" />
                   </div>
                 </div>
-                <div>
-                  <h3 className="text-base sm:text-lg font-semibold mb-2 text-gray-900">Optional Turbo Boost</h3>
+                <div className="flex-1">
+                  <h3 className="text-base sm:text-lg font-semibold mb-3 text-gray-900">Optional Turbo Boost</h3>
                   <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                     While AI voice agents work with any lead source, adding this 
                     premium lead generation service creates an unstoppable growth 
@@ -81,7 +81,7 @@ const AiHuman: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex flex-col items-center lg:items-start mt-10 gap-8">
+            <div className="flex flex-col items-center lg:items-start mt-12 gap-8">
               <a href="#calendar" className="btn-primary px-8">
                 Supercharge Your Business
               </a>
