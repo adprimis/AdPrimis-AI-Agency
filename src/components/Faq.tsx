@@ -56,7 +56,7 @@ const Faq: React.FC = () => {
           </motion.span>
           
           <motion.h2 
-            className="text-3xl md:text-4xl font-bold mb-4"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -65,7 +65,7 @@ const Faq: React.FC = () => {
           </motion.h2>
           
           <motion.p 
-            className="text-white/70 max-w-2xl mx-auto"
+            className="text-sm sm:text-base text-white/70 max-w-2xl mx-auto px-4 sm:px-0"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -76,7 +76,7 @@ const Faq: React.FC = () => {
 
         <div 
           ref={ref}
-          className="max-w-3xl mx-auto space-y-4"
+          className="max-w-3xl mx-auto space-y-3 sm:space-y-4 px-4 sm:px-0"
         >
           {faqs.map((faq, index) => (
             <motion.div 
@@ -87,10 +87,10 @@ const Faq: React.FC = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <button
-                className="flex justify-between items-center w-full p-6 text-left focus:outline-none group hover:bg-gray-700/80 transition-colors"
+                className="flex justify-between items-center w-full p-4 sm:p-6 text-left focus:outline-none group hover:bg-gray-700/80 transition-colors"
                 onClick={() => toggleFaq(index)}
               >
-                <span className="text-xl font-medium text-white/95 group-hover:text-primary transition-colors">{faq.question}</span>
+                <span className="text-base sm:text-xl font-medium text-white/95 group-hover:text-primary transition-colors">{faq.question}</span>
                 <span className="flex-shrink-0 ml-4">
                   {activeIndex === index ? (
                     <Minus className="h-5 w-5 text-primary" />
@@ -109,7 +109,7 @@ const Faq: React.FC = () => {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden bg-gray-800/30"
                   >
-                    <p className="p-6 text-white/70">
+                    <p className="p-4 sm:p-6 text-sm sm:text-base text-white/70 leading-relaxed">
                       {faq.answer}
                     </p>
                   </motion.div>

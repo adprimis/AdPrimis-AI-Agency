@@ -24,46 +24,46 @@ const Contact: React.FC = () => {
             transition={{ duration: 0.5 }}
             className="lg:pr-8"
           >
-            <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-black text-white mb-4">
+            <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-black text-white mb-3 sm:mb-4">
               Let's Connect
             </span>
             
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
               <span className="text-primary">Book a Strategy Call</span>
             </h2>
             
-            <p className="text-gray-600 mb-8">
+            <p className="text-sm sm:text-base text-gray-600 mb-6 sm:mb-8">
               Discover how our AI voice agents can transform your business operations and boost your revenue. Schedule a personalized consultation with our team if you feel ready for evolution.
             </p>
             
             <div className="space-y-4">
               <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                  <Calendar className="text-primary w-5 h-5" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center mr-3 sm:mr-4">
+                  <Calendar className="text-primary w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <div>
-                  <h3 className="font-medium">Personalized Strategy</h3>
-                  <p className="text-gray-500">Custom solutions tailored to your business needs</p>
+                  <h3 className="text-sm sm:text-base font-medium">Personalized Strategy</h3>
+                  <p className="text-xs sm:text-sm text-gray-500">Custom solutions tailored to your business needs</p>
                 </div>
               </div>
               
               <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                  <MessageSquare className="text-primary w-5 h-5" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center mr-3 sm:mr-4">
+                  <MessageSquare className="text-primary w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <div>
-                  <h3 className="font-medium">No-Pressure Consultation</h3>
-                  <p className="text-gray-500">Learn about the technology with zero obligation</p>
+                  <h3 className="text-sm sm:text-base font-medium">No-Pressure Consultation</h3>
+                  <p className="text-xs sm:text-sm text-gray-500">Learn about the technology with zero obligation</p>
                 </div>
               </div>
               
               <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                  <Phone className="text-primary w-5 h-5" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center mr-3 sm:mr-4">
+                  <Phone className="text-primary w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <div>
-                  <h3 className="font-medium">Live Demonstration</h3>
-                  <p className="text-gray-500">Hear our AI voice agents in action</p>
+                  <h3 className="text-sm sm:text-base font-medium">Live Demonstration</h3>
+                  <p className="text-xs sm:text-sm text-gray-500">Hear our AI voice agents in action</p>
                 </div>
               </div>
             </div>
@@ -74,7 +74,7 @@ const Contact: React.FC = () => {
             initial={{ opacity: 0, x: 30 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
             transition={{ duration: 0.5 }}
-            className="bg-white rounded-xl shadow-xl border border-gray-100 p-8 relative lg:sticky lg:top-24 hidden lg:block"
+            className="bg-white rounded-xl shadow-xl border border-gray-100 p-4 sm:p-8 relative lg:sticky lg:top-24 hidden lg:block"
           >
             <iframe
               src="https://api.leadconnectorhq.com/widget/booking/Hc79fppD1agT3g9IbbQS"
@@ -84,10 +84,10 @@ const Contact: React.FC = () => {
           </motion.div>
 
           {/* Mobile Calendar - No Animation */}
-          <div id="calendar" className="bg-white rounded-xl shadow-xl border border-gray-100 p-8 relative lg:hidden">
+          <div id="calendar" className="bg-white rounded-xl shadow-xl border border-gray-100 p-4 sm:p-8 relative lg:hidden">
             <iframe
               src="https://api.leadconnectorhq.com/widget/booking/Hc79fppD1agT3g9IbbQS"
-              style={{ width: '100%', height: '600px', border: 'none' }}
+              style={{ width: '100%', height: '500px', border: 'none' }}
               allowFullScreen
             ></iframe>
           </div>

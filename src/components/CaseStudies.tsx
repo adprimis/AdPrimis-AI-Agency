@@ -112,7 +112,7 @@ const CaseStudies: React.FC = () => {
           </motion.span>
           
           <motion.h2 
-            className="text-3xl md:text-4xl font-bold mb-4"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -121,7 +121,7 @@ const CaseStudies: React.FC = () => {
           </motion.h2>
           
           <motion.p 
-            className="text-white/80 max-w-2xl mx-auto mb-8"
+            className="text-sm sm:text-base text-white/80 max-w-2xl mx-auto mb-6 sm:mb-8 px-4 sm:px-0"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -130,7 +130,7 @@ const CaseStudies: React.FC = () => {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8 max-w-7xl mx-auto px-4 sm:px-0">
           {caseStudies.map((study, index) => (
             <motion.div
               key={study.id}
@@ -156,12 +156,12 @@ const CaseStudies: React.FC = () => {
                       transition={{ duration: 0.2 }}
                     >
                       <motion.div
-                        className="w-20 h-20 rounded-full bg-primary flex items-center justify-center shadow-lg cursor-pointer hover:brightness-110 transition-all"
+                        className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-primary flex items-center justify-center shadow-lg cursor-pointer hover:brightness-110 transition-all"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                       >
                         {videoStates[study.videoId]?.player?.getPlayerState() === 2 ? (
-                          <PlayCircle className="w-12 h-12 text-white" />
+                          <PlayCircle className="w-10 h-10 sm:w-12 sm:h-12 text-white" />
                         ) : (
                           <motion.div
                             animate={{ 
@@ -173,7 +173,7 @@ const CaseStudies: React.FC = () => {
                               repeatType: "reverse"
                             }}
                           >
-                            <PlayCircle className="w-12 h-12 text-white" />
+                            <PlayCircle className="w-10 h-10 sm:w-12 sm:h-12 text-white" />
                           </motion.div>
                         )}
                       </motion.div>
@@ -181,16 +181,16 @@ const CaseStudies: React.FC = () => {
                   )}
                 </AnimatePresence>
               </div>
-              <div className="p-6">
-                <div className="flex items-center mb-4 transform group-hover:translate-x-2 transition-transform duration-300">
+              <div className="p-4 sm:p-6">
+                <div className="flex items-center mb-3 sm:mb-4 transform group-hover:translate-x-2 transition-transform duration-300">
                   <div className="transform group-hover:rotate-12 transition-transform duration-300">
                     {study.icon}
                   </div>
-                  <h3 className="text-xl font-semibold ml-3 text-gray-900 group-hover:text-primary transition-colors duration-300">
+                  <h3 className="text-lg sm:text-xl font-semibold ml-3 text-gray-900 group-hover:text-primary transition-colors duration-300">
                     {study.title}
                   </h3>
                 </div>
-                <p className="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
+                <p className="text-sm sm:text-base text-gray-600 group-hover:text-gray-800 transition-colors duration-300 leading-relaxed">
                   {study.description}
                 </p>
               </div>

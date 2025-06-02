@@ -113,48 +113,48 @@ const Services: React.FC = () => {
 
           <motion.h2 
             variants={fadeUpVariant}
-            className="text-3xl md:text-4xl font-bold mb-4"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4"
           >
             AI-Powered <span className="text-[#FF6B00]">Voice Solutions</span>
           </motion.h2>
 
           <motion.p 
             variants={fadeUpVariant}
-            className="text-white/70 max-w-2xl mx-auto"
+            className="text-sm sm:text-base text-white/70 max-w-2xl mx-auto px-4 sm:px-0"
           >
             Our AI voice agents deliver personalized, efficient communication that drives business growth while reducing operational costs.
           </motion.p>
         </div>
 
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
           variants={staggerContainer}
         >
           {serviceItems.map((service, index) => (
             <motion.div
               key={index}
               variants={cardVariant}
-              className="group bg-[#FFF7F0] rounded-xl p-6 hover:shadow-md hover:ring-2 hover:ring-[#FF6B00]/40 transition-all duration-300 cursor-pointer relative overflow-hidden"
+              className="group bg-[#FFF7F0]/95 rounded-xl p-4 sm:p-6 hover:shadow-md hover:ring-2 hover:ring-[#FF6B00]/40 transition-all duration-300 cursor-pointer relative overflow-hidden"
             >
               {/* Geometric background pattern */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#FF6B00]/10 to-transparent rounded-full transform translate-x-16 -translate-y-16"></div>
-                <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-[#FF6B00]/5 to-transparent rounded-full transform -translate-x-12 translate-y-12"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#FF6B00]/15 to-transparent rounded-full transform translate-x-16 -translate-y-16"></div>
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-[#FF6B00]/10 to-transparent rounded-full transform -translate-x-12 translate-y-12"></div>
               </div>
 
               <div className="flex items-start gap-4 relative z-10">
-                <div className="p-3 rounded-lg bg-[#FF6B00]/10 group-hover:bg-[#FF6B00]/20 transition-all duration-300 relative overflow-hidden flex items-center justify-center min-w-[48px] min-h-[48px]">
+                <div className="p-3 rounded-lg bg-[#FF6B00]/15 group-hover:bg-[#FF6B00]/25 transition-all duration-300 relative overflow-hidden flex items-center justify-center min-w-[48px] min-h-[48px]">
                   {/* Icon background animation */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shine"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shine"></div>
                   </div>
                   <service.icon className="w-6 h-6 text-[#FF6B00] transition-colors duration-300 relative z-10" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-2 text-black group-hover:text-[#FF6B00] transition-colors duration-300">
+                  <h3 className="text-base sm:text-lg font-semibold mb-1.5 sm:mb-2 text-black group-hover:text-[#FF6B00] transition-colors duration-300">
                     {service.title}
                   </h3>
-                  <p className="text-sm text-[#6B7280]">{service.description}</p>
+                  <p className="text-xs sm:text-sm text-[#6B7280] leading-relaxed">{service.description}</p>
                 </div>
               </div>
 
@@ -194,7 +194,7 @@ const Services: React.FC = () => {
 
           <motion.h2 
             variants={fadeUpVariant}
-            className="text-3xl md:text-4xl font-bold mb-4"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4"
           >
             <span className="text-white">Our </span>
             <span
@@ -211,14 +211,14 @@ const Services: React.FC = () => {
         </div>
 
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10"
+          className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8 relative z-10"
           variants={staggerContainer}
         >
           {deliveryProcess.map((step, index) => (
             <motion.div
               key={index}
               variants={cardVariant}
-              className="relative text-center rounded-xl p-6 pt-12 border border-[#FF6B00] transition-all duration-300 cursor-pointer group bg-dark/50 backdrop-blur-sm"
+              className="relative text-center rounded-xl p-4 sm:p-6 pt-10 sm:pt-12 border border-[#FF6B00] transition-all duration-300 cursor-pointer group bg-dark/50 backdrop-blur-sm"
             >
               {/* Connecting lines - between boxes 1-2 and 2-3 */}
               {index === 0 && (
@@ -251,13 +251,13 @@ const Services: React.FC = () => {
 
               <motion.h3 
                 variants={fadeUpVariant}
-                className="text-xl font-bold mb-2 text-white relative z-30"
+                className="text-lg sm:text-xl font-bold mb-1.5 sm:mb-2 text-white relative z-30"
               >
                 {step.title}
               </motion.h3>
               <motion.p 
                 variants={fadeUpVariant}
-                className="text-sm text-white/70 relative z-30"
+                className="text-xs sm:text-sm text-white/70 relative z-30 leading-relaxed"
               >
                 {step.description}
               </motion.p>
