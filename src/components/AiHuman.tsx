@@ -3,15 +3,15 @@ import { Circle, Zap, TrendingUp } from 'lucide-react';
 
 const AiHuman: React.FC = () => {
   return (
-    <section className="relative py-24 bg-white">
+    <section className="relative py-16 md:py-24 bg-white">
       {/* Overlay to block background animations */}
       <div className="absolute inset-0 bg-white opacity-95"></div>
       
       <div className="container-custom relative z-10">
-        <div className="flex flex-col lg:flex-row gap-20 items-start">
+        <div className="flex flex-col lg:flex-row gap-12 md:gap-20 items-start">
           {/* Left Content */}
           <div className="flex-1 max-w-2xl">
-            <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium text-primary bg-primary/10 mb-6">
+            <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium text-primary bg-primary/10 mb-4 md:mb-6">
               Growth Formula
             </span>
             
@@ -19,7 +19,7 @@ const AiHuman: React.FC = () => {
               Human <span className="text-primary">+</span> AI <span className="text-primary">=</span> Winning Machine
             </h2>
             
-            <p className="text-gray-600 text-sm sm:text-base lg:text-[1.05rem] mb-12 leading-relaxed max-w-2xl">
+            <p className="text-gray-600 text-sm sm:text-base lg:text-[1.05rem] mb-10 md:mb-12 leading-relaxed max-w-2xl">
               Just as a high-performance engine needs premium fuel to reach its full 
               potential, AI voice agents need quality leads to work and maximize results. 
               The best fuel comes from combining human expertise with AI technology - 
@@ -81,14 +81,14 @@ const AiHuman: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex flex-col items-center lg:items-start mt-12 gap-8">
+            <div className="flex flex-col items-center lg:items-start mt-8 md:mt-12 gap-8">
               <a href="#calendar" className="btn-primary px-8">
                 Supercharge Your Business
               </a>
             </div>
           </div>
           {/* Right Visualization (separate column for desktop) */}
-          <div className="w-full max-w-[520px] lg:max-w-[540px] h-[540px] lg:h-[580px] mx-auto lg:ml-16 relative shadow-sm mt-8 lg:mt-48 flex flex-col justify-center items-center bg-primary/10 rounded-2xl p-6 lg:p-14">
+          <div className="w-full max-w-[520px] lg:max-w-[540px] h-[540px] lg:h-[580px] mx-auto lg:ml-16 relative shadow-sm mt-6 md:mt-8 lg:mt-48 flex flex-col justify-center items-center bg-primary/10 rounded-2xl p-6 lg:p-14">
             {/* Labels */}
             <div className="absolute top-6 left-6">
               <span className="px-4 py-1 bg-white rounded-md text-sm font-medium text-gray-700 shadow-sm">Human</span>
