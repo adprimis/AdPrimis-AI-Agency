@@ -127,7 +127,7 @@ const Services: React.FC = () => {
         </div>
 
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 px-4 sm:px-0"
           variants={staggerContainer}
         >
           {serviceItems.map((service, index) => (
@@ -143,15 +143,15 @@ const Services: React.FC = () => {
               </div>
 
               <div className="flex items-start gap-4 relative z-10">
-                <div className="p-3 rounded-lg bg-[#FF6B00]/15 group-hover:bg-[#FF6B00]/25 transition-all duration-300 relative overflow-hidden flex items-center justify-center min-w-[48px] min-h-[48px]">
+                <div className="p-2 sm:p-3 rounded-lg bg-[#FF6B00]/15 group-hover:bg-[#FF6B00]/25 transition-all duration-300 relative overflow-hidden flex items-center justify-center min-w-[40px] sm:min-w-[48px] min-h-[40px] sm:min-h-[48px]">
                   {/* Icon background animation */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shine"></div>
                   </div>
-                  <service.icon className="w-6 h-6 text-[#FF6B00] transition-colors duration-300 relative z-10" />
+                  <service.icon className="w-5 h-5 sm:w-6 sm:h-6 text-[#FF6B00] transition-colors duration-300 relative z-10" />
                 </div>
                 <div>
-                  <h3 className="text-base sm:text-lg font-semibold mb-1.5 sm:mb-2 text-black group-hover:text-[#FF6B00] transition-colors duration-300">
+                  <h3 className="text-sm sm:text-base md:text-lg font-semibold mb-1 sm:mb-2 text-black group-hover:text-[#FF6B00] transition-colors duration-300">
                     {service.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-[#6B7280] leading-relaxed">{service.description}</p>

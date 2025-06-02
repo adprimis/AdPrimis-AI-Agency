@@ -107,10 +107,10 @@ const AiHuman: React.FC = () => {
           {/* Right Content - Visualization Box */}
           <div className="w-full max-w-[400px] sm:max-w-[450px] lg:max-w-[520px] h-[400px] sm:h-[450px] lg:h-[540px] mx-auto lg:ml-16 relative shadow-sm mt-6 md:mt-8 lg:mt-48 flex flex-col items-center bg-black rounded-2xl p-4 sm:p-6 lg:p-14">
             {/* Title Section */}
-            <div className="text-center mb-3 sm:mb-2 -mt-2 sm:-mt-4">
-              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2 tracking-tight">Victory System</h3>
+            <div className="text-center mb-3 sm:mb-2 mt-4 sm:mt-6">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-1.5 sm:mb-2 tracking-tight">Victory System</h3>
               <p 
-                className="text-primary text-sm font-medium tracking-wide animate-pulse-slow relative" 
+                className="text-primary text-[10px] sm:text-xs font-medium tracking-wide animate-pulse-slow relative" 
                 style={{ 
                   textShadow: `
                     0 0 5px rgba(255, 107, 0, 0.8),
@@ -126,8 +126,8 @@ const AiHuman: React.FC = () => {
             </div>
 
             {/* Victory System Visualization */}
-            <div className="w-full h-full flex items-center justify-center px-4 sm:px-8 mt-6 sm:mt-8 lg:mt-12">
-              <div className="w-[60%] sm:w-[55%] lg:w-[50%] h-[60%] sm:h-[55%] lg:h-[50%] z-10">
+            <div className="w-full h-full flex items-center justify-center px-4 sm:px-8 mt-4 sm:mt-6 lg:mt-8">
+              <div className="w-[70%] sm:w-[65%] lg:w-[60%] h-[70%] sm:h-[65%] lg:h-[60%] z-10">
                 <VictorySystem />
               </div>
             </div>

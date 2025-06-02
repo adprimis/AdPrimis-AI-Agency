@@ -4,70 +4,59 @@ import { motion } from 'framer-motion';
 // Define the BackgroundStars component
 const BackgroundStars: React.FC = () => {
   // Define the number of general background stars and the planet-specific stars
-  const numGeneralStars = 50; // You can adjust this
-  const numPlanetStars = 30; // Number of stars around the 4th planet
-  // Approximate position of the 4th planet (index 3, distance 120)
-  const planetApproxDistance = 120 * 1.5; // Accounting for desktop scale factor
-  const planetInfluenceRadius = 30; // Radius around the planet to place stars
+  const numGeneralStars = 50;
+  const numPlanetStars = 45;
+  const planetApproxDistance = 120 * 1.5;
+  const planetInfluenceRadius = 40;
 
-  // Generate general background stars (excluding the central area and planet area)
+  // Generate general background stars
   const generalStars = Array.from({ length: numGeneralStars }).map((_, i) => ({
     id: `general-${i}`,
-    // Generate positions outside a central circular area and the area of the 4th planet
     x: (Math.random() - 0.5) * 800,
     y: (Math.random() - 0.5) * 600,
-    size: Math.random() * 2 + 1, // Star size between 1 and 3px
-    delay: Math.random() * 5, // Animation delay
-    duration: Math.random() * 2 + 1, // Animation duration
-    opacity: [0, 1, 0.5], // Gentle pulse opacity
-    scale: [1, 1.2, 1], // Gentle pulse scale
+    size: Math.random() * 3 + 2, // Increased size range from 1-3 to 2-5
+    delay: Math.random() * 5,
+    duration: Math.random() * 2 + 1,
+    opacity: [0.3, 0.8, 0.3], // Increased base opacity
+    scale: [1, 1.2, 1],
   }));
 
-  // Filter general stars to be outside a central radius (e.g., 200px from center) and not near the 4th planet's approximate position
+  // Filter general stars
   const filteredGeneralStars = generalStars.filter(star => {
     const distanceFromCenter = Math.sqrt(star.x * star.x + star.y * star.y);
-    // Approximate 4th planet position (assuming it's roughly to the right on its orbit)
-    // A more precise approach would track actual animated position, but this is simpler
-    const planetApproxX = planetApproxDistance; // Assuming it's generally along the x-axis at some point
+    const planetApproxX = planetApproxDistance;
     const planetApproxY = 0; 
     const distanceFromPlanet = Math.sqrt(Math.pow(star.x - planetApproxX, 2) + Math.pow(star.y - planetApproxY, 2));
 
-    return distanceFromCenter > 200 && distanceFromPlanet > planetInfluenceRadius * 2; // Exclude stars within central 200px and within 60px of approximate planet position
+    return distanceFromCenter > 200 && distanceFromPlanet > planetInfluenceRadius * 2;
   });
 
   // Generate stars specifically around the 4th planet
   const planetStars = Array.from({ length: numPlanetStars }).map((_, i) => ({
     id: `planet-${i}`,
-    // Position stars randomly within a radius around the 4th planet's approximate position
-    // We need to account for the planet's orbital motion. A simple approach is to add stars
-    // relative to the planet's approximate position *on its orbit*. Since the orbit is
-    // centered, and the planet translates out from the center, its position relative
-    // to the center of the container is approximately `(planetApproxDistance * cos(angle), planetApproxDistance * sin(angle))`. However, since the animation
-    // is `translateX` on a rotating div, the planet's local position is `(planetApproxDistance, 0)` relative to its rotating parent.
-    // The parent is centered. So the planet's world position is complex.
-    // Let's simplify and just position stars in a cluster around an *average* or *likely* spot on the orbit, e.g., to the right.
-    x: (Math.random() - 0.5) * planetInfluenceRadius + planetApproxDistance, // Random pos around approx planet X
-    y: (Math.random() - 0.5) * planetInfluenceRadius, // Random pos around approx planet Y
-    size: Math.random() * 1 + 0.5, // Small size between 0.5 and 1.5px
-    delay: Math.random() * 0.5, // Shorter animation delay
-    duration: Math.random() * 1 + 0.5, // Shorter animation duration
-    opacity: [0.9, 1, 0.9], // High opacity pulse
-    scale: [1, 1.05, 1], // Very subtle pulse scale
+    x: (Math.random() - 0.5) * planetInfluenceRadius + planetApproxDistance,
+    y: (Math.random() - 0.5) * planetInfluenceRadius,
+    size: Math.random() * 2 + 1.5, // Increased size range from 0.5-2 to 1.5-3.5
+    delay: Math.random() * 0.3,
+    duration: Math.random() * 0.8 + 0.3,
+    opacity: [0.7, 1, 0.7], // Increased base opacity
+    scale: [1, 1.2, 1], // Increased scale effect
   }));
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+    <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
       {/* Render general background stars */}
       {filteredGeneralStars.map(star => (
         <motion.div
           key={star.id}
-          className="absolute bg-white rounded-full z-0"
+          className="absolute bg-white rounded-full"
           style={{
             width: star.size,
             height: star.size,
             left: `calc(50% + ${star.x}px)`,
             top: `calc(50% + ${star.y}px)`,
-            boxShadow: '0 0 5px rgba(255, 255, 255, 0.5)',
+            boxShadow: '0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.4)',
+            zIndex: 10
           }}
           animate={{
             opacity: star.opacity,
@@ -86,13 +75,14 @@ const BackgroundStars: React.FC = () => {
       {planetStars.map(star => (
         <motion.div
           key={star.id}
-          className="absolute bg-white rounded-full z-0"
+          className="absolute bg-white rounded-full"
           style={{
             width: star.size,
             height: star.size,
             left: `calc(50% + ${star.x}px)`,
             top: `calc(50% + ${star.y}px)`,
-            boxShadow: '0 0 6px rgba(255, 255, 255, 0.9)', // Brighter glow for planet stars
+            boxShadow: '0 0 15px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.6)',
+            zIndex: 10
           }}
           animate={{
             opacity: star.opacity,
@@ -133,7 +123,7 @@ const VictorySystem: React.FC = () => {
       <BackgroundStars />
 
       {/* Sun (Victory Trophy) */}
-      <div className="absolute z-10">
+      <div className="absolute z-20">
         <motion.div
           className="text-4xl sm:text-5xl victory-sun"
           animate={{
@@ -185,7 +175,7 @@ const VictorySystem: React.FC = () => {
 
       {/* Planets */}
       {planets.map((planet, index) => (
-        <motion.div
+        <motion.div 
           key={`planet-${index}`}
           className="absolute"
           animate={{
