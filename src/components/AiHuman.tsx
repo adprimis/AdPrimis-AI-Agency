@@ -15,11 +15,11 @@ const AiHuman: React.FC = () => {
               Growth Formula
             </span>
             
-            <h2 className="text-3xl lg:text-3xl xl:text-[2.75rem] font-bold mb-4 md:mb-8 leading-tight text-gray-900 whitespace-nowrap">
+            <h2 className="text-2xl sm:text-3xl lg:text-3xl xl:text-[2.75rem] font-bold mb-4 md:mb-8 leading-tight text-gray-900 whitespace-nowrap">
               Human <span className="text-primary">+</span> AI <span className="text-primary">=</span> Winning Machine
             </h2>
             
-            <p className="text-gray-600 text-base lg:text-[1.05rem] mb-10 leading-relaxed mt-2 md:mt-0">
+            <p className="text-gray-600 text-sm sm:text-base lg:text-[1.05rem] mb-10 leading-relaxed mt-2 md:mt-0">
               Just as a high-performance engine needs premium fuel to reach its full 
               potential, AI voice agents need quality leads to work and maximize results. 
               The best fuel comes from combining human expertise with AI technology - 
@@ -37,8 +37,8 @@ const AiHuman: React.FC = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-2 text-gray-900">The Power of Premium Fuel</h3>
-                  <p className="text-gray-600 text-base leading-relaxed">
+                  <h3 className="text-base sm:text-lg font-semibold mb-2 text-gray-900">The Power of Premium Fuel</h3>
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                     Quality leads are the essential fuel that powers AI voice agents to 
                     realize calls. The better the leads, the more appointments booked - 
                     it's a direct relationship that drives business growth.
@@ -54,8 +54,8 @@ const AiHuman: React.FC = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-2 text-gray-900">Human-AI Fuel Production</h3>
-                  <p className="text-gray-600 text-base leading-relaxed">
+                  <h3 className="text-base sm:text-lg font-semibold mb-2 text-gray-900">Human-AI Fuel Production</h3>
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                     The finest leads come from the synergy of human media buying 
                     expertise and AI optimization. This combination fine-tunes ad 
                     campaigns to attract the most promising prospects.
@@ -71,8 +71,8 @@ const AiHuman: React.FC = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-2 text-gray-900">Optional Turbo Boost</h3>
-                  <p className="text-gray-600 text-base leading-relaxed">
+                  <h3 className="text-base sm:text-lg font-semibold mb-2 text-gray-900">Optional Turbo Boost</h3>
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                     While AI voice agents work with any lead source, adding this 
                     premium lead generation service creates an unstoppable growth 
                     engine - transforming good performance into exceptional results.
