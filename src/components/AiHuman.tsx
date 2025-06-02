@@ -4,14 +4,22 @@ import { useInView } from 'react-intersection-observer';
 import { Circle, Zap, TrendingUp, Users, BarChart3 } from 'lucide-react';
 import { Link } from 'react-scroll';
 import VictorySystem from './VictorySystem';
+import { slideInFromLeftVariant, scrollTransitionSettings } from '../utils/animations';
 
 const AiHuman: React.FC = () => {
+  const [ref, inView] = useInView(scrollTransitionSettings);
+
   return (
-    <section className="relative py-16 md:py-24 bg-white">
+    <section ref={ref} className="relative py-16 md:py-24 bg-white">
       <div className="container-custom relative z-10">
         <div className="flex flex-col lg:flex-row gap-12 md:gap-20 items-start">
           {/* Left Content */}
-          <div className="flex-1 max-w-2xl">
+          <motion.div 
+            className="flex-1 max-w-2xl"
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            variants={slideInFromLeftVariant}
+          >
             <span className="inline-block px-4 py-1.5 rounded-full text-sm font-medium text-primary bg-primary/10 mb-4 md:mb-6">
               Growth Formula
             </span>
@@ -82,19 +90,20 @@ const AiHuman: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex flex-col items-center lg:items-start mt-8 md:mt-12 gap-8">
-              <Link
-                to="calendar"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                className="btn-primary px-8 transform hover:scale-105 transition-transform duration-300"
+            <div className="flex flex-col items-center lg:items-center mt-8 md:mt-12 gap-8">
+              <button
+                onClick={() => {
+                  const calendarSection = document.getElementById('calendar');
+                  if (calendarSection) {
+                    calendarSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="btn-primary transform hover:scale-105 transition-transform duration-300"
               >
                 Supercharge Your Business
-              </Link>
+              </button>
             </div>
-          </div>
+          </motion.div>
           {/* Right Content - Visualization Box */}
           <div className="w-full max-w-[400px] sm:max-w-[450px] lg:max-w-[520px] h-[400px] sm:h-[450px] lg:h-[540px] mx-auto lg:ml-16 relative shadow-sm mt-6 md:mt-8 lg:mt-48 flex flex-col items-center bg-black rounded-2xl p-4 sm:p-6 lg:p-14">
             {/* Title Section */}

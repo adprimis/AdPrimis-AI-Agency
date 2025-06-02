@@ -267,9 +267,25 @@ export const sectionBgVariant: Variants = {
   }
 };
 
+// Slide in from left animation
+export const slideInFromLeftVariant: Variants = {
+  hidden: {
+    opacity: 0,
+    x: -50 // Start 50px to the left
+  },
+  visible: {
+    opacity: 1,
+    x: 0, // End at original position
+    transition: {
+      duration: 0.7,
+      ease: "easeOut"
+    }
+  }
+};
+
 // Scroll transition settings
 export const scrollTransitionSettings = {
   threshold: 0.1,
-  triggerOnce: false,
+  triggerOnce: true,
   margin: "0px 0px -100px 0px"
 }; 
