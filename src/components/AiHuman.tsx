@@ -8,9 +8,6 @@ import VictorySystem from './VictorySystem';
 const AiHuman: React.FC = () => {
   return (
     <section className="relative py-16 md:py-24 bg-white">
-      {/* Overlay to block background animations */}
-      <div className="absolute inset-0 bg-white opacity-95"></div>
-      
       <div className="container-custom relative z-10">
         <div className="flex flex-col lg:flex-row gap-12 md:gap-20 items-start">
           {/* Left Content */}
@@ -99,16 +96,29 @@ const AiHuman: React.FC = () => {
             </div>
           </div>
           {/* Right Content - Visualization Box */}
-          <div className="w-full max-w-[520px] lg:max-w-[540px] h-[540px] lg:h-[580px] mx-auto lg:ml-16 relative shadow-sm mt-6 md:mt-8 lg:mt-48 flex flex-col items-center bg-black rounded-2xl p-6 lg:p-14 overflow-hidden">
+          <div className="w-full max-w-[400px] sm:max-w-[450px] lg:max-w-[520px] h-[400px] sm:h-[450px] lg:h-[540px] mx-auto lg:ml-16 relative shadow-sm mt-6 md:mt-8 lg:mt-48 flex flex-col items-center bg-black rounded-2xl p-4 sm:p-6 lg:p-14">
             {/* Title Section */}
-            <div className="text-center mb-2 -mt-4">
-              <h3 className="text-2xl font-bold text-white mb-2">Victory System</h3>
-              <p className="text-primary/80 text-sm">Human + AI Powered</p>
+            <div className="text-center mb-3 sm:mb-2 -mt-2 sm:-mt-4">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2 tracking-tight">Victory System</h3>
+              <p 
+                className="text-primary text-sm font-medium tracking-wide animate-pulse-slow relative" 
+                style={{ 
+                  textShadow: `
+                    0 0 5px rgba(255, 107, 0, 0.8),
+                    0 0 10px rgba(255, 107, 0, 0.6),
+                    0 0 15px rgba(255, 107, 0, 0.4),
+                    0 0 20px rgba(255, 107, 0, 0.2)
+                  `,
+                  filter: 'brightness(1.2)'
+                }}
+              >
+                Human + AI Powered
+              </p>
             </div>
 
             {/* Victory System Visualization */}
-            <div className="w-full h-full flex items-center justify-center px-8 mt-16">
-              <div className="w-[50%] h-[50%]">
+            <div className="w-full h-full flex items-center justify-center px-4 sm:px-8 mt-6 sm:mt-8 lg:mt-12">
+              <div className="w-[60%] sm:w-[55%] lg:w-[50%] h-[60%] sm:h-[55%] lg:h-[50%] z-10">
                 <VictorySystem />
               </div>
             </div>

@@ -103,7 +103,7 @@ const Services: React.FC = () => {
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
       >
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <motion.span 
             variants={badgeVariant}
             className="inline-block px-4 py-1.5 rounded-full text-sm font-medium bg-[#FF6B00]/10 text-[#FF6B00] mb-4"
@@ -165,6 +165,13 @@ const Services: React.FC = () => {
                 <div className="absolute top-0 left-0 w-[1px] h-full bg-gradient-to-b from-transparent via-[#FF6B00]/30 to-transparent"></div>
                 <div className="absolute top-0 right-0 w-[1px] h-full bg-gradient-to-b from-transparent via-[#FF6B00]/30 to-transparent"></div>
               </div>
+
+              {/* Always visible glow effect */}
+              <div className="absolute inset-0 rounded-xl pointer-events-none z-10">
+                <div className="absolute inset-0 bg-[#FF6B00]/5 rounded-xl animate-pulse-slow"></div>
+                <div className="absolute inset-0 rounded-xl ring-1 ring-[#FF6B00]/40 animate-pulse-slow"></div>
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#FF6B00]/10 via-[#FF6B00]/5 to-[#FF6B00]/10 animate-pulse-slow"></div>
+              </div>
             </motion.div>
           ))}
         </motion.div>
@@ -172,12 +179,12 @@ const Services: React.FC = () => {
 
       {/* Delivery Process */}
       <motion.div 
-        className="container-custom relative z-10 mt-32"
+        className="container-custom relative z-10 mt-24"
         variants={staggerContainer}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
       >
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <motion.span 
             variants={badgeVariant}
             className="inline-block px-4 py-1.5 rounded-full text-sm font-medium text-[#FF6B00] bg-[#FF6B00]/10 mb-4"
@@ -185,40 +192,22 @@ const Services: React.FC = () => {
             How We Deliver
           </motion.span>
 
-          {/* Heading with decorative lines */}
-          <div className="flex items-center justify-center gap-8 mb-4 max-w-[1200px] mx-auto">
-            <motion.div 
-              variants={lineVariant}
-              className="hidden md:block w-full max-w-[300px] h-[2px] relative overflow-hidden"
+          <motion.h2 
+            variants={fadeUpVariant}
+            className="text-3xl md:text-4xl font-bold mb-4"
+          >
+            <span className="text-white">Our </span>
+            <span
+              style={{
+                background: 'linear-gradient(to right, #FF6B00, #FF3C00)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent'
+              }}
             >
-              <div className="absolute inset-0 bg-[#FF6B00]/20"></div>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#FF6B00] to-transparent animate-shine"></div>
-            </motion.div>
+              Delivery Process
+            </span>
+          </motion.h2>
 
-            <motion.h2 
-              variants={fadeUpVariant}
-              className="text-3xl md:text-4xl font-bold whitespace-nowrap"
-            >
-              <span className="text-white">Our </span>
-              <span
-                style={{
-                  background: 'linear-gradient(to right, #FF6B00, #FF3C00)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent'
-                }}
-              >
-                Delivery Process
-              </span>
-            </motion.h2>
-
-            <motion.div 
-              variants={lineVariant}
-              className="hidden md:block w-full max-w-[300px] h-[2px] relative overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-[#FF6B00]/20"></div>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#FF6B00] to-transparent animate-shine"></div>
-            </motion.div>
-          </div>
         </div>
 
         <motion.div 
@@ -231,15 +220,29 @@ const Services: React.FC = () => {
               variants={cardVariant}
               className="relative text-center rounded-xl p-6 pt-12 border border-[#FF6B00] transition-all duration-300 cursor-pointer group bg-dark/50 backdrop-blur-sm"
             >
+              {/* Connecting lines - between boxes 1-2 and 2-3 */}
+              {index === 0 && (
+                <div className="hidden md:block absolute top-1/2 left-[100%] w-8 h-[3px] bg-[#FF6B00]/60 overflow-hidden z-20">
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B00]/60 to-[#FF6B00]/40"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#FF6B00] to-transparent animate-shine"></div>
+                </div>
+              )}
+              {index === 1 && (
+                <div className="hidden md:block absolute top-1/2 left-[100%] w-8 h-[3px] bg-[#FF6B00]/60 overflow-hidden z-20">
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#FF6B00]/60 to-[#FF6B00]/40"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#FF6B00] to-transparent animate-shine"></div>
+                </div>
+              )}
+
               <motion.div 
-                className="absolute -top-5 left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-[#FF6B00] text-white flex items-center justify-center font-bold text-lg z-10"
+                className="absolute -top-5 left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full bg-[#FF6B00] text-white flex items-center justify-center font-bold text-lg z-30"
                 variants={badgeVariant}
               >
                 {step.number}
               </motion.div>
 
               <motion.div 
-                className="w-16 h-16 rounded-full bg-[#FF6B00]/10 flex items-center justify-center mx-auto mb-4"
+                className="w-16 h-16 rounded-full bg-[#FF6B00]/10 flex items-center justify-center mx-auto mb-4 relative z-30"
                 variants={iconContainerVariant}
                 animate="animate"
               >
@@ -248,21 +251,22 @@ const Services: React.FC = () => {
 
               <motion.h3 
                 variants={fadeUpVariant}
-                className="text-xl font-bold mb-2 text-white"
+                className="text-xl font-bold mb-2 text-white relative z-30"
               >
                 {step.title}
               </motion.h3>
               <motion.p 
                 variants={fadeUpVariant}
-                className="text-sm text-white/70"
+                className="text-sm text-white/70 relative z-30"
               >
                 {step.description}
               </motion.p>
 
               {/* Always visible glow effect */}
-              <div className="absolute inset-0 rounded-xl pointer-events-none">
-                <div className="absolute inset-0 bg-[#FF6B00]/5 rounded-xl"></div>
-                <div className="absolute inset-0 rounded-xl ring-1 ring-[#FF6B00]/40"></div>
+              <div className="absolute inset-0 rounded-xl pointer-events-none z-10">
+                <div className="absolute inset-0 bg-[#FF6B00]/5 rounded-xl animate-pulse-slow"></div>
+                <div className="absolute inset-0 rounded-xl ring-1 ring-[#FF6B00]/40 animate-pulse-slow"></div>
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#FF6B00]/10 via-[#FF6B00]/5 to-[#FF6B00]/10 animate-pulse-slow"></div>
               </div>
             </motion.div>
           ))}
