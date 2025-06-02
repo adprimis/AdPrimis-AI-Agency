@@ -94,69 +94,9 @@ const Services: React.FC = () => {
   return (
     <motion.section
       ref={ref}
-      className="section bg-dark text-white relative noise-bg section-gradient overflow-hidden pt-8 md:pt-12"
+      className="section relative overflow-hidden pt-8 md:pt-12"
     >
-      {/* Geometric Background Animations */}
-      <motion.div 
-        className="absolute inset-0 overflow-hidden pointer-events-none"
-        initial={{ opacity: 0 }}
-        animate={inView ? { opacity: 1 } : { opacity: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <motion.div 
-          className="absolute -top-20 -right-20 w-96 h-96 bg-gradient-to-br from-primary/20 to-transparent rounded-full blur-3xl"
-          variants={geometricShapeVariant}
-          animate="animate"
-        />
-        
-        <motion.div 
-          className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-gradient-to-tr from-primary/10 to-transparent rounded-full blur-3xl"
-          variants={geometricShapeVariant}
-          animate="animate"
-        />
-        
-        <motion.div 
-          className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary/30 rounded-full"
-          variants={floatingDotVariant}
-          animate="animate"
-        />
-        <motion.div 
-          className="absolute top-1/3 right-1/4 w-3 h-3 bg-primary/20 rounded-full"
-          variants={floatingDotVariant}
-          animate="animate"
-          style={{ animationDelay: '1s' }}
-        />
-        {/* Additional geometric stars for more visibility */}
-        <motion.div 
-          className="absolute top-10 left-1/2 w-2 h-2 bg-primary/40 rounded-full"
-          variants={floatingDotVariant}
-          animate="animate"
-          style={{ animationDelay: '2s' }}
-        />
-        <motion.div 
-          className="absolute bottom-10 right-1/3 w-3 h-3 bg-primary/30 rounded-full"
-          variants={floatingDotVariant}
-          animate="animate"
-          style={{ animationDelay: '3s' }}
-        />
-        <motion.div 
-          className="absolute top-1/2 left-10 w-2 h-2 bg-primary/20 rounded-full"
-          variants={floatingDotVariant}
-          animate="animate"
-          style={{ animationDelay: '1.5s' }}
-        />
-        <motion.div 
-          className="absolute bottom-1/4 right-10 w-2 h-2 bg-primary/30 rounded-full"
-          variants={floatingDotVariant}
-          animate="animate"
-          style={{ animationDelay: '2.5s' }}
-        />
-      </motion.div>
-
-      {/* Background gradients */}
-      <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark/95 to-dark"></div>
-
-      {/* Services */}
+      {/* Services content */}
       <motion.div 
         className="container-custom relative z-10"
         variants={staggerContainer}
@@ -237,28 +177,7 @@ const Services: React.FC = () => {
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
       >
-        <div className="text-center mb-16 relative">
-          {/* Additional geometric elements for the delivery process section */}
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <motion.div 
-              className="absolute -top-20 left-1/2 transform -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-b from-primary/5 to-transparent rounded-full blur-3xl"
-              variants={geometricShapeVariant}
-              animate="animate"
-            />
-            <motion.div 
-              className="absolute top-1/2 left-0 w-2 h-2 bg-primary/40 rounded-full"
-              variants={floatingDotVariant}
-              animate="animate"
-              style={{ animationDelay: '1.5s' }}
-            />
-            <motion.div 
-              className="absolute top-1/3 right-0 w-2 h-2 bg-primary/40 rounded-full"
-              variants={floatingDotVariant}
-              animate="animate"
-              style={{ animationDelay: '2.5s' }}
-            />
-          </div>
-
+        <div className="text-center mb-16">
           <motion.span 
             variants={badgeVariant}
             className="inline-block px-4 py-1.5 rounded-full text-sm font-medium text-[#FF6B00] bg-[#FF6B00]/10 mb-4"
