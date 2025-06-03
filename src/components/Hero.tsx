@@ -52,16 +52,14 @@ const Hero: React.FC = () => {
             className="mb-6 mt-2 md:mt-8 md:mb-8"
           >
             <div className="hero-label-container flex justify-center">
-              <motion.span 
+              <span 
                 className="inline-block px-3 py-1 rounded-full text-xs sm:text-sm md:text-base font-medium bg-gray-800/60 text-white mb-4 border border-primary whitespace-nowrap relative"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
               >
                 <span className="absolute inset-0 rounded-full border-2 border-primary animate-glow"></span>
                 <span className="relative z-10 tracking-wide">
                   Revolutionizing Business Communication & Sales
                 </span>
-              </motion.span>
+              </span>
             </div>
           </motion.div>
 

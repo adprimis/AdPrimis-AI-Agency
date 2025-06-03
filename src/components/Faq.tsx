@@ -28,6 +28,10 @@ const faqs = [
   {
     question: "How do we keep the AI system consistently generating results?",
     answer: "Think of leads as the fuel that powers our AI voice agents - the more quality leads, the better the results. That's why we handle both crucial aspects: generating high-quality leads through AI-optimized Facebook ad campaigns that continuously learn and improve, and ensuring our AI agents convert these leads efficiently. By mastering both the fuel supply (AI-driven lead generation) and the engine (AI calls), we create a powerful system where artificial intelligence works at every step to consistently book appointments and drive business growth."
+  },
+  {
+    question: "What happens if I'm not satisfied with the service?",
+    answer: "We stand behind our technology with a 14-day satisfaction guarantee. If you're not completely satisfied with our AI voice agents' performance within the first two weeks, we'll provide a full refund - no questions asked. This gives you enough time to experience the system in action and make an informed decision about its impact on your business."
   }
 ];
 
