@@ -9,6 +9,23 @@
       }
     }
   ],
+  "redirects": [
+    {
+      "source": "http://adprimis.agency/:path*",
+      "destination": "https://adprimis.agency/:path*",
+      "permanent": true
+    },
+    {
+      "source": "http://www.adprimis.agency/:path*",
+      "destination": "https://adprimis.agency/:path*",
+      "permanent": true
+    },
+    {
+      "source": "https://www.adprimis.agency/:path*",
+      "destination": "https://adprimis.agency/:path*",
+      "permanent": true
+    }
+  ],
   "routes": [
     {
       "src": "/index.html",
@@ -39,4 +56,4 @@
       "dest": "/index.html"
     }
   ]
-} 
+}
